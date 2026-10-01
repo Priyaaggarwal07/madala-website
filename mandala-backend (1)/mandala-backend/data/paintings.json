@@ -1,0 +1,74 @@
+[
+  {
+    "id": "p1",
+    "title": "Sunset Palm Mandala",
+    "desc": "Large round wall mandala, beach sunset design with palm tree.",
+    "price": 100,
+    "size": "",
+    "image": "/uploads/sunset-palm-mandala.jpg",
+    "createdAt": 1790861041434
+  },
+  {
+    "id": "p2",
+    "title": "Landscape Tea Coasters (Set of 6)",
+    "desc": "Hand-painted round coasters, mountain and sky landscape designs.",
+    "price": 1800,
+    "size": "Set of 6",
+    "image": "/uploads/landscape-coasters-set.jpg",
+    "createdAt": 1790861042434
+  },
+  {
+    "id": "p3",
+    "title": "Rainbow Gem Mandala Canvas",
+    "desc": "Large square mandala on canvas, rainbow colours with crystal gem accents.",
+    "price": 7000,
+    "size": "",
+    "image": "/uploads/rainbow-gem-mandala.jpg",
+    "createdAt": 1790861043434
+  },
+  {
+    "id": "p4",
+    "title": "Mandala Keychain \u2014 Lotus Flame",
+    "desc": "Hand-painted wooden keychain, lotus flame design.",
+    "price": 100,
+    "size": "",
+    "image": "/uploads/lotus-flame-keychain.jpg",
+    "createdAt": 1790861044434
+  },
+  {
+    "id": "p5",
+    "title": "Mandala Keychain \u2014 Golden Floral",
+    "desc": "Hand-painted wooden keychain, gold floral design on black.",
+    "price": 200,
+    "size": "",
+    "image": "/uploads/golden-floral-keychain.jpg",
+    "createdAt": 1790861045434
+  },
+  {
+    "id": "p6",
+    "title": "Blue Lotus Wall Clock",
+    "desc": "Hand-painted mandala wall clock, blue and teal lotus design.",
+    "price": 2000,
+    "size": "",
+    "image": "/uploads/blue-lotus-clock.jpg",
+    "createdAt": 1790861046434
+  },
+  {
+    "id": "p7",
+    "title": "Purple Floral Coasters (Set of 5)",
+    "desc": "Hand-painted round coasters, purple and yellow floral mandala designs.",
+    "price": 1500,
+    "size": "Set of 5",
+    "image": "/uploads/purple-floral-coasters.jpg",
+    "createdAt": 1790861047434
+  },
+  {
+    "id": "p8",
+    "title": "Tree of Life Coasters (Set of 6)",
+    "desc": "Hand-painted round coasters, tree of life dot-mandala designs.",
+    "price": 1800,
+    "size": "Set of 6",
+    "image": "/uploads/tree-of-life-coasters.jpg",
+    "createdAt": 1790861048434
+  }
+]

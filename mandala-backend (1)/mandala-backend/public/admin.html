@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandala Kala — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 60 60" id="brandMandala"></svg>
+      <div>
+        <div class="brand-name">Mandala Kala</div>
+        <div class="brand-sub">admin panel</div>
+      </div>
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="/">Public gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap upload-panel admin-shell">
+    <div class="admin-topbar">
+      <div class="section-head admin-head">
+        <span class="eyebrow">Studio control</span>
+        <h2>Admin dashboard</h2>
+        <p>Use this page to add paintings to the gallery. Customers should not see this page.</p>
+      </div>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        Secure mode
+      </div>
+    </div>
+
+    <div class="admin-summary">
+      <div class="summary-card">
+        <span>Studio status</span>
+        <strong>Live</strong>
+      </div>
+      <div class="summary-card">
+        <span>Access</span>
+        <strong>Passcode</strong>
+      </div>
+      <div class="summary-card">
+        <span>Updates</span>
+        <strong>Instant</strong>
+      </div>
+    </div>
+
+    <div class="gate premium-gate" id="gate">
+      <div class="field">
+        <label for="passInput">Enter passcode</label>
+        <input type="password" id="passInput" placeholder="passcode">
+      </div>
+      <button class="btn btn-maroon" id="gateBtn">Unlock</button>
+      <small>Default passcode: <strong>mandala123</strong> — please change this in <code>server.js</code> (see the README for how). This is just a basic lock, not real security.</small>
+    </div>
+
+    <form class="upload-form premium-form" id="uploadForm" style="display:none;">
+      <div class="field">
+        <label>Photo of the painting</label>
+        <label class="drop" id="dropZone">
+          <span id="dropText">Click here to choose a photo</span>
+          <img id="dropPreview" style="display:none;">
+          <input type="file" id="fileInput" accept="image/*" style="display:none;">
+        </label>
+      </div>
+      <div class="field">
+        <label>Title</label>
+        <input type="text" id="fTitle" placeholder="e.g. Sun Mandala" required>
+      </div>
+      <div class="field">
+        <label>Description</label>
+        <textarea id="fDesc" placeholder="Size, medium (canvas/paper), colours, etc."></textarea>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Price (₹)</label>
+          <input type="number" id="fPrice" min="0" placeholder="e.g. 2500" required>
+        </div>
+        <div class="field">
+          <label>Size</label>
+          <input type="text" id="fSize" placeholder="e.g. 12x12 in">
+        </div>
+      </div>
+      <div class="form-msg" id="formMsg"></div>
+      <div class="admin-actions">
+        <button type="submit" class="btn btn-maroon">Add to gallery</button>
+        <button type="button" class="btn btn-outline btn-light" id="lockBtn">Lock</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap footer-grid">
+    <div>
+      <h3>Mandala Kala</h3>
+      <div class="footer-links">
+        <span>Admin controls</span>
+      </div>
+    </div>
+    <div>
+      <h3>Quick links</h3>
+      <div class="footer-links">
+        <a href="/">Public gallery</a>
+        <a href="/admin">Admin page</a>
+        <a href="https://wa.me/919636165557" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/dotsandcircles6" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
