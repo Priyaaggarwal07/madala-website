@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#241d36">
+  <meta name="description" content="Private Mandala Kala owner studio.">
+  <title>Owner dashboard — Mandala Kala</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <header class="admin-topbar">
+    <a class="brand" href="/" aria-label="Back to Mandala Kala home">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span><strong>Mandala Kala</strong><small>Owner studio</small></span>
+    </a>
+    <a class="back-link" href="/">← View public website</a>
+  </header>
+
+  <main class="admin-main">
+    <section class="login-card" id="loginPanel">
+      <div class="eyebrow">PRIVATE OWNER AREA</div>
+      <h1>Welcome back</h1>
+      <p>Sign in to manage the paintings shown in your public gallery.</p>
+      <form id="loginForm">
+        <label for="passcode">Admin passcode</label>
+        <input id="passcode" name="passcode" type="password" autocomplete="current-password" required>
+        <button class="button button-primary" id="loginButton" type="submit">Sign in</button>
+        <p class="form-message" id="loginMessage" role="alert"></p>
+      </form>
+      <div class="login-footnote"><span aria-hidden="true">●</span> Private studio · Your gallery is ready when you are</div>
+    </section>
+
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="dashboard-heading">
+        <div>
+          <div class="eyebrow">YOUR SHOP</div>
+          <h1>Painting studio</h1>
+          <p>Manage the work customers see in your gallery.</p>
+        </div>
+        <button class="button button-quiet" id="logoutButton" type="button">Sign out</button>
+      </div>
+
+      <div class="stats">
+        <article class="stat-card"><span>Live paintings</span><strong id="paintingCount">0</strong></article>
+        <article class="stat-card"><span>Average listed price</span><strong id="averagePrice">₹0</strong></article>
+        <article class="stat-card"><span>Gallery status</span><strong class="live-status"><i></i> Connected</strong></article>
+      </div>
+
+      <div class="admin-layout">
+        <section class="panel editor-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow" id="formEyebrow">NEW LISTING</div>
+              <h2 id="formTitle">Add a painting</h2>
+            </div>
+          </div>
+          <form id="paintingForm">
+            <label for="paintingTitle">Painting title <span>*</span></label>
+            <input id="paintingTitle" name="title" type="text" maxlength="120" placeholder="e.g. Lotus at Dusk" required>
+
+            <label for="paintingDescription">Description</label>
+            <textarea id="paintingDescription" name="desc" maxlength="1000" rows="4" placeholder="Materials, colours, and what makes this piece special"></textarea>
+
+            <div class="form-row">
+              <div>
+                <label for="paintingPrice">Price (INR) <span>*</span></label>
+                <input id="paintingPrice" name="price" type="number" min="0" step="1" placeholder="2500" required>
+              </div>
+              <div>
+                <label for="paintingSize">Size</label>
+                <input id="paintingSize" name="size" type="text" maxlength="80" placeholder="12 × 12 in">
+              </div>
+            </div>
+
+            <label for="paintingImage">Painting photo <span id="imageRequired">*</span></label>
+            <input id="paintingImage" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif" required>
+            <div class="image-preview" id="imagePreview" hidden>
+              <img id="previewImage" alt="Painting preview">
+              <span id="previewCaption"></span>
+            </div>
+            <p class="field-hint" id="imageHint">Choose a clear JPG, PNG, WebP, or GIF image (up to 8 MB).</p>
+            <p class="form-message" id="paintingMessage" role="status"></p>
+            <div class="form-actions">
+              <button class="button button-primary" id="saveButton" type="submit">Publish painting</button>
+              <button class="button button-quiet" id="cancelEditButton" type="button" hidden>Cancel edit</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel listings-panel">
+          <div class="listings-heading">
+            <div>
+              <div class="eyebrow">YOUR CATALOGUE</div>
+              <h2>All paintings</h2>
+            </div>
+            <label class="search-box">
+              <span class="visually-hidden">Search paintings</span>
+              <input id="searchInput" type="search" placeholder="Search paintings">
+            </label>
+          </div>
+          <p class="form-message" id="listMessage" role="alert"></p>
+          <div class="painting-list" id="paintingList" aria-live="polite"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
